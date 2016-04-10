@@ -1,0 +1,62 @@
+.bodyConnect
+{
+	background-image : url('images/neige.jpg');
+	text-align : center;
+}
+
+.bodyInscr
+{
+	background-image : url('images/neige2.jpg');
+	background-size : cover;
+	text-align : center;
+}
+
+.cuve
+{
+	width : 500px;
+	margin-left : auto;
+	margin-right : auto;
+	margin-top : 50px;
+	background-color : rgba(220,220,220,0.8);
+	border-radius : 5px;
+}
+
+.buttonOrange
+{
+	border : none;
+	background-color : #FF8000;
+	height : 40px;
+	width : 200px;
+	text-align : center;
+	border-radius : 5px;
+	color : white;
+}
+.buttonOrange:hover
+{
+	background-color : #DF7401;
+}
+
+.buttonGreen
+{
+	border : none;
+	background-color : #04B404;
+	height : 40px;
+	width : 200px;
+	text-align : center;
+	border-radius : 5px;
+	color : white;
+}
+.buttonGreen:hover
+{
+	background-color : #088A08;
+}
+
+.inp
+{
+	border : none;
+	padding : 3px;
+	text-align : left;
+	border-radius : 5px;
+	height : 30px;
+	width : 200px;
+}
