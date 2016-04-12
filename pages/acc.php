@@ -21,7 +21,7 @@
 			<li><a href="#">Créations</a>
 				<ul>
 					<li><a href="#">Photos</a></li>
-					<li><a href="#">Films</a></li>
+					<li><a href="films.php">Films</a></li>
 					<li><a href="#">Livres</a></li>
 					<li><a href="#">Autre</a></li>
 				</ul>
@@ -38,7 +38,7 @@
 					<li><a href="#">Annonçes</a></li>
 					<li><a href="#">Conversations</a></li>
 					<li><a href="#">News du site</a></li>
-					<li><a href="#">Partie administrateur</a></li>
+					<li><a href="../admin/addNews.php">Partie administrateur</a></li>
 				</ul>
 			</li>
 			<li><a href="#">Liens</a>
@@ -62,17 +62,16 @@
 		        die('Erreur : '.$e->getMessage());
 			}
 			/*On fait une boucle qui récupère les news*/
-			$selectNews = $bdd->prepare('SELECT * FROM newsAdmin LIMIT :fro, :to');
-			$selectNews->execute(array(
-				'fro' => 0,
-				'to' => 30
-			));
+			$selectNews = $bdd->query('SELECT * FROM newsAdmin LIMIT 0,30');
+
 			while($result = $selectNews->fetch()){
 				?>
+					<br/>
 					<h2><?php echo $result['title'];?></h2>
 					<p><?php echo $result['texte'];?></p>
-					<p>Ecrit par <?echo $result['auteur']; ?> le <?php echo $result['date_']?></p>
-				<?
+					<p>Ecrit par <?php echo $result['auteur']; ?> le <?php echo $result['date_']?></p><br/>
+					<hr id="ahr">
+				<?php
 			}
 		?>
 	</body>
