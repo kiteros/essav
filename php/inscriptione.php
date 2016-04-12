@@ -22,6 +22,19 @@
 		'pren' => $prenom,
 		'surn' => $surname
 	));
-	echo 'tout en ordre';
+
+	$verifUser = $bdd->prepare('SELECT * FROM utilisateurs WHERE email = :mail AND pass = :pass');
+	$verifUser->execute(array(
+		'mail' => $email,
+		'pass' => $pass
+	));
+	$donnees = $verifUser->fetch();
+	session_start();
+	$_SESSION['id'] = $donnees['id'];
+	$_SESSION['prenom'] = $donnees['prenom'];
+	$_SESSION['nom'] = $donnees['nom'];
+	$_SESSION['surnom'] = $donnees['surnom'];
+	$_SESSION['email'] = $donnees['email'];
+	header('Location : ../pages/acc.php');
 	
 ?>

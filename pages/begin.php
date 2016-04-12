@@ -21,7 +21,7 @@
 			<div class = "connect">
 				<br/>
 				<form action="../php/connexion.php" method = "post">
-					<input type="text" placeholder="Nom d'utilisateur ou Email" name="name" class="inp"/><br/><br/>
+					<input type="text" placeholder="Surnom ou Email" name="name" class="inp"/><br/><br/>
 					<input type="password" placeholder="Mot de passe" name ="pass" class="inp"/><br/><br/>
 					<input type="submit" value="Se connecter" class="buttonGreen" />
 				</form>
