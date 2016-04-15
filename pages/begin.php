@@ -13,8 +13,8 @@
 
 	<!--Ici page toute simple d'inscription au site !-->
 	<body class="bodyConnect">
-		<div class="present">
-			<h1> Bonjour cher cousin </h1>
+		<div class="present"><br/>
+			<h1> Bonjour cher cousin </h1><br/>
 			<p> Bienvenue à toi dans le plus beau site de tout les temps. Admire et contemple la version 2.0 du site !</p>
 		</div>
 		<div class="cuve">

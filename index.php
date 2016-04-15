@@ -14,7 +14,8 @@
 
 	<body>
 		<?php
-			header('Location : pages/begin.php');
+			header('Location: pages/begin.php');
+			echo 'hello';
 		?>
 	</body>
 
