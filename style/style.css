@@ -15,6 +15,11 @@ h2, h1, p, ul
 	text-align : center;
 }
 
+iframe
+{
+	display : inline-block;
+}
+
 textarea
 {
 	margin-right : auto;

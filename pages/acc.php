@@ -53,14 +53,7 @@
 		<hr id="ahr">
 
 		<?php
-			try
-			{
-				$bdd = new PDO('mysql:host=localhost;dbname=essav;charset=utf8', 'root', 'wrmp6157');
-			}
-			catch(Exception $e)
-			{
-		        die('Erreur : '.$e->getMessage());
-			}
+			include('../include/bdd.php');
 			/*On fait une boucle qui récupère les news*/
 			$selectNews = $bdd->query('SELECT * FROM newsAdmin LIMIT 0,30');
 

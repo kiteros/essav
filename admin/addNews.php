@@ -30,14 +30,7 @@
 			<?php
 				if(isset($_POST['textarea'])){
 					/*On a posté la nouvelle news*/
-					try
-					{
-						$bdd = new PDO('mysql:host=localhost;dbname=essav;charset=utf8', 'root', 'wrmp6157');
-					}
-					catch(Exception $e)
-					{
-				        die('Erreur : '.$e->getMessage());
-					}
+					include('../include/bdd.php');
 
 					$addnew = $bdd->prepare('INSERT INTO newsAdmin (id, title, texte, date_, auteur) VALUES (NULL, :title, :texte, CURRENT_DATE(), :auteur)');
 

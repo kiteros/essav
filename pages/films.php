@@ -51,14 +51,19 @@
 		</ul>
 		<hr/><br/>
 		<h1>Poster des films</h1>
-		<div class="addConv" />
+		<div class="addConv">
 			<a href="#?w=500" rel="popup_name" class="poplight"><img src="../style/images/add.png" width="250px" height="250px" class="btn_ouvrir" title="ajouter" alt="ajouter"  /></a>
 		</div>
+		<?php
+			/*Liste des videos ici*/
+		?>
+		
 		<div id="popup_name" class="popup_block">
 			<br/><h2> Ajout de film</h2><br/>
 			<p> Pour ajouter une vidéo sur le site, c'est très facile :</p><br/>
 			<ul>
-				<li>Rendez vous sur Youtube en cliquant <a href="#">ici</a></li>
+				<li>Rendez vous sur Youtube en cliquant <a href="http://youtube.fr">ici</a></li>
+				<li>Connectez-vous en haut à droite avec l'identifiant: cousin.eschbach@gmail.com, et le mot de passe francontois4273</li>
 				<li>Cliquez sur poster une vidéo</li>
 				<li>Glissez votre vidéo dans le cadre et attendez que le traitement se termine</li>
 				<li>Avant de la poster, vérifiez bien qu'en bas à droite, la vidéo est classée en non-répertoriée</li>
@@ -67,13 +72,14 @@
 			</ul>
 			<br/>
 			<form action="../php/postFilm.php" method="post" enctype="multipart/form-data">
-				<input type="text" placeholder="adresse de la vidéo youtube" /><br/><br/>
+				<input type="text" placeholder="adresse de la vidéo youtube" name="yt" /><br/><br/>
 				<p>Image miniature (jpg, png, gif...): </p>
 				<input type="file" value="image miniature" name="mini" /><br/><br/>
 				<input type="text" placeholder="Titre du film" name="movieTitle" /><br/><br/>
-				<textarea name="desciption">Brève description de votre film(acteurs, figurants...)</textarea><br/><br/>
+				<textarea name="description">Brève description de votre film(acteurs, figurants...)</textarea><br/><br/>
 				<input type="submit" value="Poster" class="buttonOrange" />
 			</form>
+
 		</div>
 	</body>
 	<script>

@@ -32,6 +32,7 @@
 				<br/>
 			</div>
 		</div>
+		<p>Il est très fortement déconseillé d'utiliser ce site sur smartphone ou tablette. Certaines choses risquent de ne pas fonctionner</p>
 	</body>
 
 	<footer>
