@@ -50,15 +50,40 @@
 			</li>
 		</ul>
 		<hr/><br/>
-		<h1>Poster des films</h1>
-		<div class="addConv">
+		<h1>Poster des films</h1><br/><br/>
+		<div class="film_">
 			<a href="#?w=500" rel="popup_name" class="poplight"><img src="../style/images/add.png" width="250px" height="250px" class="btn_ouvrir" title="ajouter" alt="ajouter"  /></a>
 		</div>
 		<?php
-			/*Liste des videos ici*/
+			/*Liste des videos ici avec leur vignette redirigant vers l'iframe*/
+			include('../include/bdd.php');
+			/*On liste juste les vignettes...*/
+			$searchFilm = $bdd->query('SELECT * FROM film');
+			while($films_tries = $searchFilm->fetch()){
+				/*Ici on crée le fichier correspondant au film*/
+				$contenufichier = '';
+					
+			   	$nom_page = $films_tries['idFilm'] . '_f.php';
+			    $chemin = '../flash/films/'.$nom_page;
+
+				$file = 'codephp.php';
+
+				if (!copy($file, $chemin)) {
+				    echo "La copie $file du fichier a échoué...\n";
+				}
+
+				?>
+				<div class="film_">
+					<a href="<?php echo $chemin . '?id=' . $films_tries['idFilm']; ?>"><img src="<?php echo $films_tries['mini_adress']; ?>" width="250px" height="250px" /></a>
+					<h2><?php echo $films_tries['titre']; ?></h2>
+				</div>
+					
+				<?php
+			}
 		?>
 		
 		<div id="popup_name" class="popup_block">
+			<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 			<br/><h2> Ajout de film</h2><br/>
 			<p> Pour ajouter une vidéo sur le site, c'est très facile :</p><br/>
 			<ul>

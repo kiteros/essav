@@ -82,6 +82,14 @@ position: absolute;
 	margin-left : 25%;
 }
 
+iframe
+{
+	width : 50%;
+	height : 700px;
+	margin-right : 25%;
+	margin-left : 25%;
+}
+
 .bodyConnect
 {
 	background-image : url('images/neige.jpg');
@@ -93,6 +101,11 @@ position: absolute;
 	background-image : url('images/neige2.jpg');
 	background-size : cover;
 	text-align : center;
+}
+
+.film_
+{
+	display : inline-block;
 }
 
 .cuve
