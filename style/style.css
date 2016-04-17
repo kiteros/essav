@@ -10,6 +10,12 @@
 	padding : 0;
 }
 
+.center_
+{
+	width : 50%;
+	margin-left : 25%;
+}
+
 h2, h1, p, ul
 {
 	text-align : center;
@@ -82,6 +88,12 @@ position: absolute;
 	margin-left : 25%;
 }
 
+.inComm
+{
+	width : 50%;
+	margin-left: 25%;
+}
+
 iframe
 {
 	width : 50%;
@@ -152,6 +164,22 @@ iframe
 	color : white;
 }
 .buttonGreen:hover
+{
+	background-color : #088A08;
+}
+
+.buttonGreen2
+{
+	border : none;
+	background-color : #04B404;
+	height : 40px;
+	width : 30%;
+	margin-left : 35%;
+	text-align : center;
+	border-radius : 5px;
+	color : white;
+}
+.buttonGreen2:hover
 {
 	background-color : #088A08;
 }

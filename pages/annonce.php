@@ -35,9 +35,9 @@
 			</li>
 			<li><a href="#">Divers</a>
 				<ul>
-					<li><a href="annonce.php">Annonçes</a></li>
+					<li><a href="#">Annonçes</a></li>
 					<li><a href="#">Conversations</a></li>
-					<li><a href="#">News du site</a></li>
+					<li><a href="acc.php">News du site</a></li>
 					<li><a href="../admin/addNews.php">Partie administrateur</a></li>
 				</ul>
 			</li>
@@ -49,23 +49,19 @@
 			</li>
 		</ul>
 		<hr/><br/>
-		<h1>News du site</h1><br/>
+		<h1>Postez des annonces</h1><br/>
+		<p>Cet rubrique remplace enfait les news de l'ancien site. Vous pourrez y retrouver toutes vos vieilles news. Postez des avis de reherches, ou bien racontez vos vacances!</p>
+		<br/><br/>
 		<hr id="ahr">
+
+		<form action="#" method="post">
+			<br/><br/>
+			<textarea name="text_n" class="inComm">Votre texte ici</textarea><br/><br/>
+			<input type="submit" value="Poster" class="buttonGreen2"/>
+		</form>
 
 		<?php
 			include('../include/bdd.php');
-			/*On fait une boucle qui récupère les news*/
-			$selectNews = $bdd->query('SELECT * FROM newsAdmin LIMIT 0,30');
-
-			while($result = $selectNews->fetch()){
-				?>
-					<br/>
-					<h2><?php echo $result['title'];?></h2>
-					<p><?php echo $result['texte'];?></p>
-					<p>Ecrit par <?php echo $result['auteur']; ?> le <?php echo $result['date_']?></p><br/>
-					<hr id="ahr">
-				<?php
-			}
 		?>
 	</body>
 

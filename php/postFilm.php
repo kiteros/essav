@@ -1,5 +1,6 @@
 <?php
-
+	session_start();
+	
 	if($_FILES['mini']['error'] == UPLOAD_ERR_NO_FILE){
 		$erreur = "Fichier manquant";
 	}else if($_FILES['mini']['error'] == UPLOAD_ERR_INI_SIZE){

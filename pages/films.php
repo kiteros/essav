@@ -1,3 +1,6 @@
+<?php 
+	session_start();
+?>
 <!DOCTYPE html>
 
 <html>
@@ -36,9 +39,9 @@
 			</li>
 			<li><a href="#">Divers</a>
 				<ul>
-					<li><a href="#">Annonçes</a></li>
+					<li><a href="annonces.php">Annonçes</a></li>
 					<li><a href="#">Conversations</a></li>
-					<li><a href="#">News du site</a></li>
+					<li><a href="acc.php">News du site</a></li>
 					<li><a href="../admin/addNews.php">Partie administrateur</a></li>
 				</ul>
 			</li>
@@ -101,7 +104,7 @@
 				<p>Image miniature (jpg, png, gif...): </p>
 				<input type="file" value="image miniature" name="mini" /><br/><br/>
 				<input type="text" placeholder="Titre du film" name="movieTitle" /><br/><br/>
-				<textarea name="description">Brève description de votre film(acteurs, figurants...)</textarea><br/><br/>
+				<textarea name="description" >Brève description de votre film(acteurs, figurants...)</textarea><br/><br/>
 				<input type="submit" value="Poster" class="buttonOrange" />
 			</form>
 
