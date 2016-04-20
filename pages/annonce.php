@@ -1,3 +1,7 @@
+<?php 
+	session_start();
+?>
+
 <!DOCTYPE html>
 
 <html>
@@ -56,12 +60,34 @@
 
 		<form action="#" method="post">
 			<br/><br/>
+			<input type="texte" name="titre" placeholder="Titre de votre news" class="inComm" /><br/><br/>		
 			<textarea name="text_n" class="inComm">Votre texte ici</textarea><br/><br/>
 			<input type="submit" value="Poster" class="buttonGreen2"/>
 		</form>
 
 		<?php
 			include('../include/bdd.php');
+			if(isset($_POST['text_n'])){
+				/*Un annonce est postée*/
+				$addAn = $bdd->prepare('INSERT INTO annonce (id, personne, id_pers, texte , date_, titre) VALUES (NULL, :pers, :id_pers, :texte, CURRENT_DATE(), :titre)');
+
+				$addAn->execute(array(
+					'pers' => $_SESSION['surnom'],
+					'id_pers' => $_SESSION['id'],
+					'texte' => $_POST['text_n'],
+					'titre' => $_POST['titre']
+				));
+			}
+			$searchAn = $bdd->query('SELECT * FROM annonce ORDER BY id DESC LIMIT 0,50');
+			while($t = $searchAn->fetch()){
+				?>
+					<h2><?php echo $t['titre']; ?></h2>
+					<p><?php echo $t['texte']; ?></p>
+					<p>Ecrit par <?php echo $t['personne']; ?> le <?php echo $t['date_']; ?></p><br/>
+					<hr>
+					<br/>
+				<?php
+			}
 		?>
 	</body>
 

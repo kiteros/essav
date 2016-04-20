@@ -38,7 +38,7 @@
 			</li>
 			<li><a href="#">Divers</a>
 				<ul>
-					<li><a href="#">Annonçes</a></li>
+					<li><a href="../../pages/annonces.php">Annonçes</a></li>
 					<li><a href="#">Conversations</a></li>
 					<li><a href="../../pages/acc.php">News du site</a></li>
 					<li><a href="../../admin/addNews.php">Partie administrateur</a></li>

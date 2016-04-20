@@ -24,7 +24,7 @@
 		<ul id="menu-demo2">
 			<li><a href="#">Créations</a>
 				<ul>
-					<li><a href="#">Photos</a></li>
+					<li><a href="photo.php">Photos</a></li>
 					<li><a href="#">Films</a></li>
 					<li><a href="#">Livres</a></li>
 					<li><a href="#">Autre</a></li>
@@ -39,7 +39,7 @@
 			</li>
 			<li><a href="#">Divers</a>
 				<ul>
-					<li><a href="annonces.php">Annonçes</a></li>
+					<li><a href="annonce.php">Annonçes</a></li>
 					<li><a href="#">Conversations</a></li>
 					<li><a href="acc.php">News du site</a></li>
 					<li><a href="../admin/addNews.php">Partie administrateur</a></li>
