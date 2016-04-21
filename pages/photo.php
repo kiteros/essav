@@ -53,10 +53,35 @@
 			</li>
 		</ul>
 		<hr/><br/>
-		<h1>Postez des photos!!</h1><br/>
-		<form action="../php/postPhoto.php" method="post">
+		<h1>Postez des photos!!</h1><br/><br/>
+		<form action="../php/postPhoto.php" method="post" enctype="multipart/form-data">
+			<input type="text" placeholder="Titre" name="titlePhoto" class="inComm"/><br/><br/>
+			<input type="file" value="image" name="phot" class="inComm" /><br/><br/>
+			<textarea name="desc" placeholder="Brève description facultative" class="inComm"></textarea><br/><br/>
+			<input type="submit" value="poster" class="buttonGreen2" />
 		</form>
-		
+		<br/><br/>
+		<hr>
+		<br/><br/>
+		<?php 
+			include('../include/bdd.php');
+			$search_photo = $bdd->query('SELECT * FROM photo ORDER BY id DESC');
+
+			while($photos = $search_photo->fetch()){
+				/*Ici on crée le fichier correspondant au film*/
+				?>
+				<div class="centerImage">
+					<h2><?php echo $photos['nom_photo']; ?></h2><br/><br/>
+					<img src="<?php echo $photos['adresse_photo']; ?>" width="750px" height="500px" />
+					<p><?php echo $photos['description']; ?>
+					<p>Posté par <?php echo $photos['createur']; ?> le <?php echo $photos['date_']; ?></p>
+					
+				</div>
+				<br/><br/><hr>
+				<?php
+			}
+		?>
+
 	</body>
 
 	<footer>

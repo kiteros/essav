@@ -138,6 +138,13 @@ iframe
 	width : 50%;
 }
 
+.centerImage
+{
+	width : 750px;
+	margin-right : auto;
+	margin-left : auto;
+}
+
 .buttonOrange
 {
 	border : none;

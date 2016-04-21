@@ -20,7 +20,7 @@
 		<ul id="menu-demo2">
 			<li><a href="#">Créations</a>
 				<ul>
-					<li><a href="#">Photos</a></li>
+					<li><a href="photo.php">Photos</a></li>
 					<li><a href="films.php">Films</a></li>
 					<li><a href="#">Livres</a></li>
 					<li><a href="#">Autre</a></li>
